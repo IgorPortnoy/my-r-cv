@@ -51,7 +51,7 @@ print_section <- function(position_data, section_id){
     filter(section == section_id) %>% 
     arrange(desc(end)) %>% 
     mutate(id = 1:n()) %>% 
-    pivot_longer(
+    tidyr::pivot_longer(
       starts_with('description'),
       names_to = 'description_num',
       values_to = 'description',
@@ -69,7 +69,7 @@ print_section <- function(position_data, section_id){
         end,
         glue('{end} - {start}')
       ),
-      description_bullets = map_chr(descriptions, ~paste('-', ., collapse = '\n')),
+      description_bullets = purrr::map_chr(descriptions, ~paste('-', ., collapse = '\n')),
     ) %>% 
     strip_links_from_cols(c('title', 'description_bullets')) %>% 
     mutate_all(~ifelse(is.na(.), 'N/A', .)) %>% 
