@@ -13,9 +13,9 @@ find_link <- stringr::regex("
 # referenced in an end-of-document list. 
 sanitize_links <- function(text){
   if(PDF_EXPORT){
-    str_extract_all(text, find_link) %>% 
-      pluck(1) %>% 
-      walk(function(link_from_text){
+    stringr::str_extract_all(text, find_link) %>% 
+      purrr::pluck(1) %>% 
+      purrr::walk(function(link_from_text){
         title <- link_from_text %>% str_extract('\\[.+\\]') %>% str_remove_all('\\[|\\]') 
         link <- link_from_text %>% str_extract('\\(.+\\)') %>% str_remove_all('\\(|\\)')
         

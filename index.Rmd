@@ -56,7 +56,7 @@ Contact {#contact}
 --------------------------------------------------------------------------------
 
 
-- <i class="fa fa-envelope"></i> Igoryan10@gmail.com
+- <i class="fa fa-envelope"></i> Igoryam10@gmail.com
 - <i class="fa fa-twitter"></i> IgorPortnoy
 - <i class="fa fa-github"></i> github.com/IgorPortnoy
 - <i class="fa fa-phone"></i> (+972)54-819-5657
@@ -93,13 +93,12 @@ Last updated on `r Sys.Date()`.
 Main
 ================================================================================
 
-Igor Portoy {#title}
+Igor Portnoy {#title}
 --------------------------------------------------------------------------------
 
 
 ```{r}
-intro_text <- "Experienced Data Science Specialist with a demonstrated history of working in the computer software industry. Skilled in statistics, R, Pyhton, SQL. Strong engineering thinking and focused on solving business problems using different machine learning alogrithems, depending on the problem.  
-"
+intro_text <- "Experienced Data Science Specialist with a demonstrated history of working in the computer software industry. Skilled in statistics, R, Pyhton, SQL. Strong engineering thinking and focused on solving different business problems using different machine learning alogrithems, depending on the problem."
 cat(sanitize_links(intro_text))
 ```
 
@@ -144,8 +143,7 @@ Links {data-icon=link}
 --------------------------------------------------------------------------------
 <br>
 ")
-  
-  walk2(links, 1:length(links), function(link, index){
+  purrr::walk2(links, 1:length(links), function(link, index){
     print(glue('{index}. {link}'))
   })
 }
