@@ -31,7 +31,7 @@ sup {
   /* Override default right margin for sidebar*/
   --pagedjs-margin-right: 0.2in;
   --pagedjs-margin-left: 0.2in;
-  --pagedjs-margin-up: 0.2in;
+  --pagedjs-margin-up: 0.1in;
 }
 
 /* Customize some of the sizing variables */
@@ -92,5 +92,9 @@ sup {
 /* Remove the fake bullets from lists */
 .aside li::before {
   content: auto;
+}
+
+.name {
+  margin-top: .1in;
 }
 

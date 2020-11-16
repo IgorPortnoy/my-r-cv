@@ -32,7 +32,7 @@ if(PDF_EXPORT){
   cat("
   <style>
   :root{
-    --decorator-outer-offset-left: -6px;
+    --decorator-outer-offset-left: -6.5px;
   }
   </style>")
 }
@@ -40,21 +40,19 @@ if(PDF_EXPORT){
 
 Aside
 ================================================================================
-
-
 ![logo](beta_dist.png){width=100%}
-
 ```{r}
 # When in export mode the little dots are unaligned, so fix that. 
 if(PDF_EXPORT){
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/IgorPortnoy/my-r-cv/portnoy_cv.pdf)")
+  cat("")
+  #cat("[<i class='fas fa-download'></i> Download a PDF of this
+  #    CV](https://github.com/IgorPortnoy/my-r-cv/portnoy_cv.pdf)")
 }
 ```
-Contact {#contact}
+Contact
 --------------------------------------------------------------------------------
-- <i class="fa fa-envelope"></i> Igoryam10@gmail.com
-- <i class="fa fa-twitter"></i> IgorPortnoy
-- <i class="fa fa-github"></i> github.com/IgorPortnoy
+- <i class="fa fa-envelope"></i>Igoryam10@gmail.com
+- <i class="fa fa-linkedin"></i> [igor-portnoy](https://www.linkedin.com/in/igor-portnoy-42a86364/)
 - <i class="fa fa-phone"></i> (+972)54-819-5657
 
 Skills {#skills}
@@ -69,12 +67,13 @@ Experience with
 
 - git
 - C++
+- curl
+- Bash
 - docker
 - aws/gcp
 - Rest API
 - Microservices 
-- My-SQL
-- Postgrse
+- db: My-SQL,postgresql
 
 
 Disclaimer {#disclaimer}
@@ -85,7 +84,6 @@ Made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
 The source code is available at [github.com/IgorPortnoyr/my-r-cv](https://github.com/IgorPortnoy/my-r-cv).
 
 Last updated on `r Sys.Date()`.
-
 
 
 Main
