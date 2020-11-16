@@ -32,12 +32,11 @@ if(PDF_EXPORT){
   cat("
   <style>
   :root{
-    --decorator-outer-offset-left: -6.5px;
+    --decorator-outer-offset-left: -6px;
   }
   </style>")
 }
 ```
-
 
 Aside
 ================================================================================
@@ -51,32 +50,31 @@ if(PDF_EXPORT){
   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/IgorPortnoy/my-r-cv/portnoy_cv.pdf)")
 }
 ```
-
 Contact {#contact}
 --------------------------------------------------------------------------------
-
-
 - <i class="fa fa-envelope"></i> Igoryam10@gmail.com
 - <i class="fa fa-twitter"></i> IgorPortnoy
 - <i class="fa fa-github"></i> github.com/IgorPortnoy
 - <i class="fa fa-phone"></i> (+972)54-819-5657
 
-
-
 Skills {#skills}
 --------------------------------------------------------------------------------
-
 Highly experienced in
 
+- Python
 - R 
-- SQL
+- SQL(SSMS)
 
 Experience with
 
 - git
-- python
 - C++
 - docker
+- aws/gcp
+- Rest API
+- Microservices 
+- My-SQL
+- Postgrse
 
 
 Disclaimer {#disclaimer}
@@ -98,7 +96,7 @@ Igor Portnoy {#title}
 
 
 ```{r}
-intro_text <- "Experienced Data Science Specialist with a demonstrated history of working in the computer software industry. Skilled in statistics, R, Pyhton, SQL. Strong engineering thinking and focused on solving different business problems using different machine learning alogrithems, depending on the problem."
+intro_text <- "Experienced Data Science Specialist with a demonstrated history of working in the computer software industry. Skilled in statistics, R, Pyhton, SQL. Strong engineering thinking and focused on solving different business problems using different ML algorithms."
 cat(sanitize_links(intro_text))
 ```
 
@@ -139,7 +137,6 @@ print_section(position_data, 'industry_positions')
 if(PDF_EXPORT){
   cat("
   
-Links {data-icon=link}
 --------------------------------------------------------------------------------
 <br>
 ")
